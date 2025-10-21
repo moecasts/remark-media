@@ -1,0 +1,118 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="astro-plugin-media Example">
+  <h1>🎬 astro-plugin-media Example</h1>
+
+  <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem;">
+    这是一个展示如何在 Astro 项目中使用 <code>astro-plugin-media</code> 的完整示例。
+  </p>
+
+  <nav class="nav">
+    <a href="/markdown">📝 Markdown 示例</a>
+    <a href="https://github.com/moecasts/remark-media" target="_blank">📚 GitHub</a>
+  </nav>
+
+  <section>
+    <h2>✨ 特性</h2>
+    <ul style="list-style: none; padding: 0;">
+      <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">
+        🎵 <strong>APlayer</strong> - 优雅的音频播放器
+      </li>
+      <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">
+        🎼 <strong>MetingJS</strong> - 支持网易云、QQ音乐等平台
+      </li>
+      <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">
+        🎬 <strong>DPlayer</strong> - 功能丰富的视频播放器
+      </li>
+      <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">
+        🎥 <strong>ArtPlayer</strong> - 现代化的视频播放器
+      </li>
+      <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">
+        📺 <strong>Bilibili</strong> - B站视频嵌入
+      </li>
+      <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">
+        🍉 <strong>西瓜视频</strong> - 西瓜视频嵌入
+      </li>
+      <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">
+        🔊 <strong>HTML5 Audio/Video</strong> - 原生媒体支持
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🚀 快速开始</h2>
+    <h3>1. 安装</h3>
+    <pre><code>pnpm add astro-plugin-media remark-directive</code></pre>
+
+    <h3>2. 配置</h3>
+    <pre><code>{'// astro.config.mjs\nimport { defineConfig } from \'astro/config\';\nimport media from \'astro-plugin-media\';\n\nexport default defineConfig({\n  integrations: [media()]\n});'}</code></pre>
+
+    <h3>3. 使用</h3>
+    <pre><code>{'# 在 Markdown 中使用\n\n::aplayer{name="歌曲名" artist="歌手" url="音频URL"}\n\n::bilibili{bvid="BV1xx411c7mD"}\n\n::video{src="视频URL" controls="true"}'}</code></pre>
+  </section>
+
+  <section>
+    <h2>📺 示例：Bilibili 视频</h2>
+    <p>这是一个手动嵌入的 Bilibili 视频示例（在 Astro 组件中）：</p>
+    <div class="media-bilibili" style="width: 100%; max-width: 850px; margin: 1.5rem auto;">
+      <iframe
+        src="https://player.bilibili.com/player.html?bvid=BV1xx411c7mD&page=1&high_quality=1&danmaku=1&autoplay=0"
+        allowfullscreen="allowfullscreen"
+        scrolling="no"
+        border="0"
+        frameborder="0"
+        framespacing="0"
+        sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups"
+        style="width: 100%; aspect-ratio: 16/9; border-radius: 8px;">
+      </iframe>
+    </div>
+  </section>
+
+  <section>
+    <h2>🔊 示例：HTML5 Audio</h2>
+    <p>原生 HTML5 音频播放器：</p>
+    <audio
+      class="media-audio"
+      controls
+      style="width: 100%; max-width: 850px; margin: 1.5rem auto; display: block;">
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+      您的浏览器不支持音频播放。
+    </audio>
+  </section>
+
+  <section>
+    <h2>📹 示例：HTML5 Video</h2>
+    <p>原生 HTML5 视频播放器：</p>
+    <video
+      class="media-video"
+      controls
+      style="width: 100%; max-width: 850px; margin: 1.5rem auto; display: block;">
+      <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+      您的浏览器不支持视频播放。
+    </video>
+  </section>
+
+  <section>
+    <h2>📝 更多示例</h2>
+    <p>
+      查看 <a href="/markdown">Markdown 示例页面</a> 了解如何在 Markdown 文件中使用所有媒体类型。
+    </p>
+  </section>
+
+  <section style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin-top: 3rem;">
+    <h2>📚 文档</h2>
+    <ul style="list-style: none; padding: 0;">
+      <li style="padding: 0.5rem 0;">
+        📖 <a href="https://github.com/moecasts/remark-media" target="_blank">GitHub 仓库</a>
+      </li>
+      <li style="padding: 0.5rem 0;">
+        📦 <a href="https://www.npmjs.com/package/astro-plugin-media" target="_blank">npm 包</a>
+      </li>
+      <li style="padding: 0.5rem 0;">
+        🔧 <a href="https://github.com/moecasts/remark-media#configuration" target="_blank">配置文档</a>
+      </li>
+    </ul>
+  </section>
+</Layout>

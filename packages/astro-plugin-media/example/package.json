@@ -1,0 +1,15 @@
+{
+  "name": "astro-plugin-media-example",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^5.0.0",
+    "astro-plugin-media": "workspace:*",
+    "remark-directive": "^3.0.0"
+  }
+}

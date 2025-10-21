@@ -1,0 +1,58 @@
+{
+	"name": "astro-plugin-media",
+	"version": "1.0.0",
+	"description": "A media plugin for Astro - supports APlayer, DPlayer, ArtPlayer, Bilibili, Xigua and more",
+	"type": "module",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		}
+	},
+	"files": [
+		"dist",
+		"client.d.ts"
+	],
+	"scripts": {
+		"build": "tsup",
+		"dev": "tsup --watch"
+	},
+	"keywords": [
+		"astro",
+		"astro-integration",
+		"media",
+		"meting",
+		"aplayer",
+		"dplayer",
+		"artplayer",
+		"bilibili",
+		"xigua",
+		"video",
+		"audio"
+	],
+	"author": "moecasts",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/moecasts/remark-media.git",
+		"directory": "packages/astro-plugin-media"
+	},
+	"bugs": {
+		"url": "https://github.com/moecasts/remark-media/issues"
+	},
+	"homepage": "https://github.com/moecasts/remark-media#readme",
+	"peerDependencies": {
+		"astro": "^4.0.0 || ^5.0.0",
+		"remark-directive": "^3.0.0"
+	},
+	"dependencies": {
+		"remark-media": "workspace:*"
+	},
+	"devDependencies": {
+		"astro": "^5.0.0",
+		"tsup": "^8.3.5",
+		"typescript": "^5.7.2"
+	}
+}
