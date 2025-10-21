@@ -1,0 +1,37 @@
+{
+	"name": "astro-plugin-media-monorepo",
+	"version": "1.0.0",
+	"private": true,
+	"description": "A media plugin for Astro - supports APlayer, DPlayer, ArtPlayer, Bilibili, Xigua and more",
+	"type": "module",
+	"scripts": {
+		"build": "pnpm -r --filter './packages/*' run build",
+		"dev": "pnpm -r --filter './packages/*' run dev",
+		"check": "biome check .",
+		"format": "biome format --write .",
+		"lint": "biome lint .",
+		"lint:fix": "biome lint --write .",
+		"clean": "pnpm -r --filter './packages/*' exec rm -rf dist",
+		"test:build": "pnpm clean && pnpm build && cd example && pnpm build",
+		"test:examples": "pnpm -r --filter '*example*' run build",
+		"example:remark": "cd packages/remark-media/example && pnpm build && pnpm preview",
+		"example:astro": "cd packages/astro-plugin-media/example && pnpm dev"
+	},
+	"author": "moecasts",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/moecasts/remark-media.git"
+	},
+	"bugs": {
+		"url": "https://github.com/moecasts/remark-media/issues"
+	},
+	"homepage": "https://github.com/moecasts/remark-media#readme",
+	"devDependencies": {
+		"@biomejs/biome": "^2.0.6",
+		"@types/mdast": "^4.0.4",
+		"@types/node": "^22.10.2",
+		"tsup": "^8.3.5",
+		"typescript": "^5.7.2"
+	}
+}
