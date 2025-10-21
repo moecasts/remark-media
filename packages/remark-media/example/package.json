@@ -1,0 +1,18 @@
+{
+  "name": "remark-media-example",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node build.js && node -e \"console.log('\\n✅ Build complete! Open output.html in your browser.')\"",
+    "preview": "node build.js && open output.html || xdg-open output.html"
+  },
+  "dependencies": {
+    "remark": "^15.0.1",
+    "remark-directive": "^3.0.0",
+    "remark-html": "^16.0.1",
+    "remark-media": "workspace:*",
+    "unified": "^11.0.4"
+  }
+}

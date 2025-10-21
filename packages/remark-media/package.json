@@ -1,0 +1,58 @@
+{
+	"name": "remark-media",
+	"version": "1.0.0",
+	"description": "A remark plugin for media embeds - supports APlayer, DPlayer, ArtPlayer, Bilibili, Xigua and more",
+	"type": "module",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsup",
+		"dev": "tsup --watch"
+	},
+	"keywords": [
+		"remark",
+		"remark-plugin",
+		"markdown",
+		"media",
+		"meting",
+		"aplayer",
+		"dplayer",
+		"artplayer",
+		"bilibili",
+		"xigua",
+		"video",
+		"audio"
+	],
+	"author": "moecasts",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/moecasts/remark-media.git",
+		"directory": "packages/remark-media"
+	},
+	"bugs": {
+		"url": "https://github.com/moecasts/remark-media/issues"
+	},
+	"homepage": "https://github.com/moecasts/remark-media#readme",
+	"peerDependencies": {
+		"remark-directive": "^3.0.0"
+	},
+	"dependencies": {
+		"mdast-util-directive": "^3.0.0",
+		"unist-util-visit": "^5.0.0"
+	},
+	"devDependencies": {
+		"@types/mdast": "^4.0.4",
+		"tsup": "^8.3.5",
+		"typescript": "^5.7.2"
+	}
+}
